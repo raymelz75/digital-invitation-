@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Arjun ♥ Meera · Wedding Invitation · 13 December 2026</title>
+  <meta name="description" content="With joy in our hearts, we invite you and your family to our wedding on Sunday, 13 December 2026 in Chennai. Welcome all!">
+  <meta name="theme-color" content="#5a0f24">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Arjun ♥ Meera · You're invited to our wedding">
+  <meta property="og:description" content="Sunday, 13 December 2026 · Chennai. Muhurtham, reception and dinner. Welcome all!">
+  <meta property="og:image" content="https://raymelz75.github.io/digital-invitation-/images/hero.jpg">
+  <meta property="og:url" content="https://raymelz75.github.io/digital-invitation-/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&family=Noto+Sans+Tamil:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="images/hero.jpg">
+  <style>
+    :root {
+      --maroon: #5a0f24;
+      --maroon-2: #7d1733;
+      --wine: #3a0716;
+      --gold: #d4a64a;
+      --gold-2: #f3d58a;
+      --foil: linear-gradient(135deg, #b8862b 0%, #f6dc8c 35%, #c9952f 60%, #f3d58a 100%);
+      --ivory: #fff8ec;
+      --cream: #fbefd9;
+      --ink: #3b2414;
+      --muted: #7a6450;
+      --green: #1f9d55;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: "Poppins", "Noto Sans Tamil", sans-serif; color: var(--ink); background: var(--ivory); line-height: 1.6; overflow-x: hidden; }
+    body.locked { overflow: hidden; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    .script { font-family: "Great Vibes", cursive; font-weight: 400; }
+    .serif { font-family: "Cormorant Garamond", serif; }
+    .ta { font-family: "Noto Sans Tamil", sans-serif; }
+    .wrap { width: min(1100px, 100% - 40px); margin: 0 auto; }
+    .foil-text { background: var(--foil); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+    /* ---------- Envelope intro ---------- */
+    .intro { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; text-align: center; padding: 24px;
+      background: radial-gradient(circle at 50% 35%, var(--maroon-2), var(--wine) 75%); color: var(--gold-2); transition: opacity .9s ease, visibility .9s; }
+    .intro.gone { opacity: 0; visibility: hidden; }
+    .intro .pre { letter-spacing: .32em; text-transform: uppercase; font-size: .78rem; color: #f0d9a8; opacity: .85; }
+    .intro h1 { font-size: clamp(3rem, 12vw, 5.2rem); line-height: 1.1; margin: 10px 0 26px; }
+    .env { position: relative; width: 270px; height: 180px; margin: 0 auto; cursor: pointer; perspective: 900px; }
+    .env .back { position: absolute; inset: 0; background: #f5e3c3; border-radius: 10px; box-shadow: 0 30px 60px rgba(0,0,0,.45); }
+    .env .card { position: absolute; left: 14px; right: 14px; top: 14px; height: 150px; background: var(--ivory); border-radius: 6px; display: grid; place-items: center; color: var(--maroon); transition: transform 1s .5s cubic-bezier(.2,.8,.2,1); }
+    .env .card span { font-family: "Great Vibes", cursive; font-size: 2.2rem; }
+    .env .front { position: absolute; inset: 0; border-radius: 10px; background: linear-gradient(160deg, #f0dab2, #e3c38c); clip-path: polygon(0 0, 50% 58%, 100% 0, 100% 100%, 0 100%); }
+    .env .flap { position: absolute; left: 0; right: 0; top: 0; height: 110px; transform-origin: top; transition: transform .8s ease; z-index: 3;
+      background: linear-gradient(to bottom, #e6c995, #dcb978); clip-path: polygon(0 0, 100% 0, 50% 100%); }
+    .env .seal { position: absolute; left: 50%; top: 82px; width: 58px; height: 58px; margin-left: -29px; border-radius: 50%; z-index: 4;
+      background: radial-gradient(circle at 35% 35%, #b02a46, #6d0f26); color: var(--gold-2); display: grid; place-items: center;
+      font-family: "Great Vibes", cursive; font-size: 1.15rem; box-shadow: 0 6px 14px rgba(0,0,0,.4); transition: opacity .4s; }
+    .env.open .flap { transform: rotateX(180deg); z-index: 0; }
+    .env.open .seal { opacity: 0; }
+    .env.open .card { transform: translateY(-90px); }
+    .intro .tap { margin-top: 34px; font-size: .95rem; letter-spacing: .08em; color: #f6e7c8; animation: pulse 1.8s ease-in-out infinite; }
+    @keyframes pulse { 50% { opacity: .45; } }
+
+    /* ---------- Hero ---------- */
+    .hero { position: relative; min-height: 100svh; display: grid; align-items: end; color: #fff; overflow: hidden; }
+    .hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 41% 30%; transform: scale(1.08); animation: zoom 14s ease-out forwards; }
+    @keyframes zoom { to { transform: scale(1); } }
+    .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(58,7,22,.15) 0%, rgba(58,7,22,.25) 40%, rgba(58,7,22,.92) 85%); }
+    .hero-in { position: relative; z-index: 2; text-align: center; padding: 0 20px 70px; }
+    .welcome { display: inline-block; border: 1px solid rgba(243,213,138,.7); border-radius: 999px; padding: 6px 18px; font-size: .78rem; letter-spacing: .26em; text-transform: uppercase; color: var(--gold-2); background: rgba(58,7,22,.35); backdrop-filter: blur(4px); }
+    .hero .ta-line { margin-top: 12px; font-size: 1rem; color: #ffe9bf; }
+    .hero h1 { font-size: clamp(3.6rem, 14vw, 7rem); line-height: 1.05; margin: 10px 0 4px; text-shadow: 0 6px 30px rgba(0,0,0,.4); }
+    .hero h1 .amp { font-size: .6em; color: var(--gold-2); vertical-align: middle; }
+    .hero .getting { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 1.35rem; color: #fde9c4; }
+    .date-chip { display: inline-flex; gap: 14px; align-items: center; margin-top: 18px; font-family: "Cormorant Garamond", serif; font-size: 1.3rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-2); }
+    .date-chip i { width: 40px; height: 1px; background: var(--gold-2); opacity: .7; }
+    .count { display: flex; justify-content: center; gap: 10px; margin-top: 24px; }
+    .count div { width: 74px; padding: 10px 0; border-radius: 14px; background: rgba(255,248,236,.12); border: 1px solid rgba(243,213,138,.35); backdrop-filter: blur(6px); }
+    .count b { display: block; font-family: "Cormorant Garamond", serif; font-size: 2rem; line-height: 1; color: #fff; }
+    .count small { font-size: .66rem; letter-spacing: .18em; color: var(--gold-2); }
+    .scroll-cue { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); z-index: 2; color: var(--gold-2); font-size: .75rem; letter-spacing: .2em; animation: bob 2s ease-in-out infinite; }
+    @keyframes bob { 50% { transform: translate(-50%, 6px); } }
+    .petal { position: absolute; top: -20px; z-index: 1; width: 14px; height: 18px; border-radius: 80% 0 80% 0; background: #f7a1b5; opacity: .8; animation: fall linear infinite; }
+    @keyframes fall { to { transform: translate(60px, 110vh) rotate(540deg); } }
+
+    /* ---------- Sections ---------- */
+    section { padding: 90px 0; }
+    .head { text-align: center; margin-bottom: 44px; }
+    .head .eyebrow { font-size: .75rem; letter-spacing: .3em; text-transform: uppercase; color: var(--maroon-2); font-weight: 600; }
+    .head h2 { font-family: "Great Vibes", cursive; font-weight: 400; font-size: clamp(2.6rem, 8vw, 3.6rem); color: var(--maroon); line-height: 1.15; margin-top: 6px; }
+    .orn { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 12px auto 0; color: var(--gold); }
+    .orn i { width: 60px; height: 1px; background: currentColor; }
+    .orn svg { width: 22px; height: 22px; }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s ease, transform .9s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+
+    /* Invitation note */
+    .note { background: var(--cream); position: relative; }
+    .note .card { max-width: 720px; margin: 0 auto; text-align: center; background: var(--ivory); border-radius: 28px; padding: 54px 34px; border: 1px solid #ecd6ae; box-shadow: 0 30px 60px rgba(90,15,36,.08); position: relative; }
+    .note .card::before { content: ""; position: absolute; inset: 12px; border: 1px solid #e8cf9d; border-radius: 20px; pointer-events: none; }
+    .note .ganesha { font-size: .82rem; letter-spacing: .2em; color: var(--maroon-2); text-transform: uppercase; }
+    .note p.lead { font-family: "Cormorant Garamond", serif; font-size: 1.45rem; line-height: 1.5; margin: 18px 0; color: var(--ink); }
+    .families { display: grid; grid-template-columns: 1fr auto 1fr; gap: 18px; align-items: center; margin: 30px 0 10px; }
+    .families h3 { font-family: "Great Vibes", cursive; font-weight: 400; font-size: 2.6rem; color: var(--maroon); line-height: 1; }
+    .families p { font-size: .88rem; color: var(--muted); margin-top: 8px; }
+    .families .heart { color: var(--gold); font-size: 1.6rem; }
+    .love-line { margin-top: 22px; font-style: italic; font-family: "Cormorant Garamond", serif; font-size: 1.25rem; color: var(--maroon-2); }
+
+    /* Story */
+    .story { background: var(--ivory); }
+    .timeline { position: relative; max-width: 960px; margin: 0 auto; }
+    .timeline::before { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: linear-gradient(var(--gold), transparent); transform: translateX(-50%); }
+    .step { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 60px; position: relative; }
+    .step::after { content: "♥"; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px; border-radius: 50%; background: var(--maroon); color: var(--gold-2); display: grid; place-items: center; font-size: .95rem; box-shadow: 0 0 0 6px var(--ivory); }
+    .step:nth-child(even) .ph { order: 2; }
+    .step .ph { border-radius: 24px; overflow: hidden; aspect-ratio: 4/3; box-shadow: 0 24px 48px rgba(90,15,36,.18); }
+    .step .ph img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s; }
+    .step:hover .ph img { transform: scale(1.05); }
+    .step .tx small { font-size: .78rem; letter-spacing: .24em; color: var(--gold); font-weight: 600; text-transform: uppercase; }
+    .step .tx h3 { font-family: "Cormorant Garamond", serif; font-size: 2rem; color: var(--maroon); line-height: 1.2; margin: 4px 0 8px; }
+    .step .tx p { color: var(--muted); }
+
+    /* Events */
+    .events { background: linear-gradient(180deg, var(--maroon) 0%, var(--wine) 100%); color: #fff; position: relative; overflow: hidden; }
+    .events .head h2 { color: var(--gold-2); }
+    .events .head .eyebrow { color: #f0c9a0; }
+    .ev-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; }
+    .ev { background: rgba(255,248,236,.06); border: 1px solid rgba(243,213,138,.3); border-radius: 26px; overflow: hidden; display: flex; flex-direction: column; }
+    .ev .pic { height: 210px; position: relative; }
+    .ev .pic img { width: 100%; height: 100%; object-fit: cover; }
+    .ev .pic::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 40%, rgba(58,7,22,.85)); }
+    .ev .pic span { position: absolute; left: 22px; bottom: 16px; z-index: 2; font-family: "Great Vibes", cursive; font-size: 2.4rem; color: var(--gold-2); line-height: 1; }
+    .ev .body { padding: 22px 24px 26px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+    .row { display: flex; gap: 14px; align-items: flex-start; }
+    .row .ic { flex: none; width: 42px; height: 42px; border-radius: 12px; background: rgba(243,213,138,.14); color: var(--gold-2); display: grid; place-items: center; }
+    .row .ic svg { width: 21px; height: 21px; }
+    .row b { display: block; font-weight: 600; font-size: 1rem; color: #fff; }
+    .row small { color: #e9cfb4; font-size: .88rem; }
+    .btns { display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto; padding-top: 6px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; border-radius: 999px; padding: 11px 18px; font-weight: 600; font-size: .88rem; text-decoration: none; border: 0; cursor: pointer; font-family: inherit; transition: transform .2s, box-shadow .2s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn svg { width: 17px; height: 17px; }
+    .btn-gold { background: var(--foil); color: var(--wine); box-shadow: 0 10px 24px rgba(212,166,74,.35); }
+    .btn-line { border: 1px solid rgba(243,213,138,.6); color: var(--gold-2); background: transparent; }
+    .dinner-note { margin-top: 26px; text-align: center; font-family: "Cormorant Garamond", serif; font-size: 1.25rem; color: #fde9c4; font-style: italic; }
+
+    /* Gallery */
+    .gallery { background: var(--cream); }
+    .grid-g { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 180px; gap: 14px; }
+    .grid-g figure { border-radius: 18px; overflow: hidden; cursor: zoom-in; position: relative; }
+    .grid-g figure img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s; }
+    .grid-g figure:hover img { transform: scale(1.06); }
+    .grid-g .tall { grid-row: span 2; }
+    .grid-g .wide { grid-column: span 2; }
+    .lb { position: fixed; inset: 0; z-index: 90; background: rgba(20,4,10,.92); display: none; place-items: center; padding: 20px; cursor: zoom-out; }
+    .lb.on { display: grid; }
+    .lb img { max-height: 88vh; border-radius: 14px; }
+
+    /* RSVP */
+    .rsvp { background: var(--ivory); }
+    .rsvp-card { max-width: 620px; margin: 0 auto; background: #fff; border-radius: 28px; padding: 38px 32px; border: 1px solid #efdcb8; box-shadow: 0 30px 60px rgba(90,15,36,.1); }
+    .field { margin-bottom: 18px; }
+    .field label, .field .lbl { display: block; font-weight: 600; font-size: .9rem; margin-bottom: 8px; color: var(--maroon); }
+    .field input, .field textarea { width: 100%; border: 1px solid #e6d3b3; border-radius: 14px; padding: 13px 16px; font: inherit; background: var(--ivory); color: var(--ink); }
+    .field input:focus, .field textarea:focus { outline: 2px solid var(--gold); border-color: transparent; }
+    .choices { display: flex; gap: 10px; flex-wrap: wrap; }
+    .choices label { flex: 1; min-width: 140px; margin: 0; }
+    .choices input { position: absolute; opacity: 0; }
+    .choices span { display: block; text-align: center; padding: 12px 10px; border-radius: 14px; border: 1px solid #e6d3b3; font-weight: 500; color: var(--ink); cursor: pointer; transition: .2s; }
+    .choices input:checked + span { background: var(--maroon); color: var(--gold-2); border-color: var(--maroon); }
+    .choices input:focus-visible + span { outline: 2px solid var(--gold); }
+    .stepper { display: inline-flex; align-items: center; border: 1px solid #e6d3b3; border-radius: 999px; overflow: hidden; background: var(--ivory); }
+    .stepper button { width: 46px; height: 46px; border: 0; background: transparent; font-size: 1.4rem; color: var(--maroon); cursor: pointer; }
+    .stepper output { min-width: 48px; text-align: center; font-weight: 600; font-size: 1.1rem; }
+    .rsvp-card .btn-send { width: 100%; justify-content: center; background: var(--green); color: #fff; padding: 15px; font-size: 1rem; box-shadow: 0 12px 26px rgba(31,157,85,.3); }
+    .thanks { display: none; text-align: center; padding: 20px 0; }
+    .thanks h3 { font-family: "Great Vibes", cursive; font-weight: 400; font-size: 3rem; color: var(--maroon); }
+    .thanks.on { display: block; }
+
+    /* Footer */
+    footer { background: var(--wine); color: #f0dcc0; text-align: center; padding: 70px 20px 40px; }
+    footer .names { font-family: "Great Vibes", cursive; font-size: 3.4rem; color: var(--gold-2); line-height: 1.1; }
+    footer .wel { margin: 14px 0 4px; font-family: "Cormorant Garamond", serif; font-size: 1.35rem; }
+    footer .credit { margin-top: 40px; padding-top: 22px; border-top: 1px solid rgba(243,213,138,.2); font-size: .85rem; color: #d8bfa0; }
+    footer .credit a { color: var(--gold-2); font-weight: 600; }
+    footer .demo { margin-top: 8px; font-size: .75rem; opacity: .7; }
+
+    /* Music button */
+    .music { position: fixed; right: 18px; bottom: 18px; z-index: 50; width: 54px; height: 54px; border-radius: 50%; border: 0; cursor: pointer; background: var(--foil); color: var(--wine); box-shadow: 0 10px 24px rgba(0,0,0,.3); display: grid; place-items: center; }
+    .music svg { width: 24px; height: 24px; }
+    .music.playing { animation: spin 6s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    @media (min-width: 821px) {
+      .hero { align-items: center; }
+      .hero::after { background: linear-gradient(90deg, rgba(58,7,22,.05) 25%, rgba(58,7,22,.55) 55%, rgba(58,7,22,.9) 85%); }
+      .hero-in { justify-self: end; width: 50%; padding: 0 5% 0 0; }
+      .hero > img { object-position: 30% 30%; }
+    }
+    @media (max-width: 820px) {
+      .date-chip { font-size: 1.05rem; letter-spacing: .08em; }
+      .date-chip i { display: none; }
+      section { padding: 70px 0; }
+      .timeline::before { left: 20px; }
+      .step { grid-template-columns: 1fr; gap: 18px; padding-left: 52px; margin-bottom: 44px; }
+      .step::after { left: 20px; top: 0; transform: translate(-50%, 0); }
+      .step:nth-child(even) .ph { order: 0; }
+      .ev-grid { grid-template-columns: 1fr; }
+      .grid-g { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; }
+      .grid-g .wide { grid-column: span 2; }
+      .families { grid-template-columns: 1fr; gap: 8px; }
+      .note .card { padding: 46px 22px; }
+      .count div { width: 66px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body class="locked">
+
+  <!-- Envelope intro -->
+  <div class="intro" id="intro">
+    <div>
+      <p class="pre">You're invited</p>
+      <h1 class="script foil-text">Arjun &amp; Meera</h1>
+      <div class="env" id="env" role="button" tabindex="0" aria-label="Open the invitation">
+        <div class="back"></div>
+        <div class="card"><span>Save the date</span></div>
+        <div class="front"></div>
+        <div class="flap"></div>
+        <div class="seal">A&amp;M</div>
+      </div>
+      <p class="tap">Tap to open your invitation</p>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero" id="top">
+    <img src="images/hero.jpg" alt="Arjun and Meera, the bride and groom, smiling together in a garden">
+    <div id="petals" aria-hidden="true"></div>
+    <div class="hero-in">
+      <span class="welcome">Welcome all</span>
+      <p class="ta ta-line">அனைவரையும் அன்புடன் வரவேற்கிறோம்</p>
+      <h1 class="script">Arjun <span class="amp">&amp;</span> Meera</h1>
+      <p class="getting">are getting married</p>
+      <div class="date-chip"><i></i>Sunday · 13 December 2026<i></i></div>
+      <div class="count" id="count" aria-label="Countdown to the wedding">
+        <div><b id="cd-d">00</b><small>DAYS</small></div>
+        <div><b id="cd-h">00</b><small>HRS</small></div>
+        <div><b id="cd-m">00</b><small>MIN</small></div>
+        <div><b id="cd-s">00</b><small>SEC</small></div>
+      </div>
+    </div>
+    <a href="#invite" class="scroll-cue">SCROLL ↓</a>
+  </header>
+
+  <!-- Invitation note -->
+  <section class="note" id="invite">
+    <div class="wrap">
+      <div class="card reveal">
+        <p class="ganesha">With the blessings of God &amp; our families</p>
+        <p class="lead">We joyfully invite you and your family to celebrate the wedding of</p>
+        <div class="families">
+          <div>
+            <h3>Arjun</h3>
+            <p>Son of Mr. Raghavan &amp; Mrs. Lakshmi</p>
+          </div>
+          <div class="heart">♥</div>
+          <div>
+            <h3>Meera</h3>
+            <p>Daughter of Mr. Suresh &amp; Mrs. Kavitha</p>
+          </div>
+        </div>
+        <div class="orn"><i></i><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 6.6L21 9l-5.2 4.3L17.6 21 12 17.3 6.4 21l1.8-7.7L3 9l6.6-.4z"/></svg><i></i></div>
+        <p class="love-line">From best friends to forever. Our love story found its happy ending, and our families said yes. Your presence will make our day complete.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Love story -->
+  <section class="story" id="story">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">A love marriage</p>
+        <h2>Our Love Story</h2>
+        <div class="orn"><i></i><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-9.5-9.3C1 8 3.5 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.5 0 6 3.5 4.5 7.2C19.5 16.4 12 21 12 21z"/></svg><i></i></div>
+      </div>
+      <div class="timeline">
+        <div class="step reveal">
+          <div class="ph"><img src="images/story-1.jpg" alt="Arjun and Meera walking together with a bicycle" loading="lazy"></div>
+          <div class="tx"><small>2018 · College</small><h3>The day we met</h3><p>A borrowed notebook, a cycle ride home and a friendship that felt easy from the very first day.</p></div>
+        </div>
+        <div class="step reveal">
+          <div class="ph"><img src="images/story-2.jpg" alt="Arjun and Meera laughing together under the trees" loading="lazy"></div>
+          <div class="tx"><small>2021 · Best friends</small><h3>Falling in love</h3><p>Long talks, endless laughter and the slow, sweet realisation that we were meant to be more than friends.</p></div>
+        </div>
+        <div class="step reveal">
+          <div class="ph"><img src="images/story-3.jpg" alt="Arjun and Meera holding their engagement rings" loading="lazy"></div>
+          <div class="tx"><small>2025 · The proposal</small><h3>She said yes!</h3><p>Two rings, one question and the happiest "yes" of our lives.</p></div>
+        </div>
+        <div class="step reveal">
+          <div class="ph"><img src="images/story-4.jpg" alt="Bride and groom holding hands during the wedding ritual" loading="lazy"></div>
+          <div class="tx"><small>13 Dec 2026 · Forever</small><h3>Our families' blessing</h3><p>Our parents blessed our love, and now we begin our forever, with all of you by our side.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section class="events" id="events">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">Sunday · 13 December 2026</p>
+        <h2>Wedding Events</h2>
+      </div>
+      <div class="ev-grid">
+        <article class="ev reveal">
+          <div class="pic"><img src="images/couple-stage.jpg" alt="Bride and groom on the wedding stage with flower garlands" loading="lazy" style="object-position:50% 25%"><span>Muhurtham</span></div>
+          <div class="body">
+            <div class="row"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span><div><b>Sunday, 13 December 2026</b><small>Wedding ceremony</small></div></div>
+            <div class="row"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>9:00 AM – 10:30 AM</b><small>Breakfast served from 7:30 AM</small></div></div>
+            <div class="row"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0114 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.6"/></svg></span><div><b>Sri Lakshmi Kalyana Mahal</b><small>Velachery Main Road, Velachery, Chennai</small></div></div>
+            <div class="btns">
+              <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&amp;query=Velachery+Main+Road+Chennai" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 11l18-8-8 18-2-8z"/></svg>Get directions</a>
+              <a class="btn btn-line" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Arjun+%26+Meera+Wedding+Muhurtham&amp;dates=20261213T033000Z/20261213T050000Z&amp;location=Sri+Lakshmi+Kalyana+Mahal,+Velachery,+Chennai" target="_blank" rel="noopener">Add to calendar</a>
+            </div>
+          </div>
+        </article>
+        <article class="ev reveal">
+          <div class="pic"><img src="images/mehendi.jpg" alt="Bride's mehendi hands holding the groom's hand" loading="lazy"><span>Reception &amp; Dinner</span></div>
+          <div class="body">
+            <div class="row"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span><div><b>Sunday, 13 December 2026</b><small>Reception &amp; grand dinner</small></div></div>
+            <div class="row"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Reception from 6:30 PM</b><small>Dinner from 7:30 PM onwards</small></div></div>
+            <div class="row"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0114 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.6"/></svg></span><div><b>The Grand Orchid Banquet Hall</b><small>OMR, Sholinganallur, Chennai</small></div></div>
+            <div class="btns">
+              <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&amp;query=Sholinganallur+OMR+Chennai" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 11l18-8-8 18-2-8z"/></svg>Get directions</a>
+              <a class="btn btn-line" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Arjun+%26+Meera+Reception+%26+Dinner&amp;dates=20261213T130000Z/20261213T163000Z&amp;location=The+Grand+Orchid+Banquet+Hall,+OMR,+Chennai" target="_blank" rel="noopener">Add to calendar</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p class="dinner-note reveal">Dinner will be served at the reception venue. Please join us for an evening of love, music and celebration.</p>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery" id="gallery">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">Moments</p>
+        <h2>Our Gallery</h2>
+      </div>
+      <div class="grid-g reveal">
+        <figure class="tall"><img src="images/couple-stage.jpg" alt="Bride and groom with garlands on the wedding stage" loading="lazy"></figure>
+        <figure class="wide"><img src="images/hero.jpg" alt="Couple smiling together in a garden" loading="lazy"></figure>
+        <figure class="tall"><img src="images/bride.jpg" alt="Bride in a red bridal saree and jewellery" loading="lazy"></figure>
+        <figure><img src="images/story-3.jpg" alt="Couple holding engagement rings" loading="lazy"></figure>
+        <figure><img src="images/story-2.jpg" alt="Couple laughing under the trees" loading="lazy"></figure>
+        <figure class="wide"><img src="images/story-1.jpg" alt="Couple walking with a bicycle" loading="lazy"></figure>
+        <figure class="wide"><img src="images/story-4.jpg" alt="Bride and groom holding hands" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+  <div class="lb" id="lb"><img alt=""></div>
+
+  <!-- RSVP -->
+  <section class="rsvp" id="rsvp">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">Kindly respond</p>
+        <h2>Will you join us?</h2>
+      </div>
+      <div class="rsvp-card reveal">
+        <form id="rsvp-form">
+          <div class="field">
+            <label for="r-name">Your name</label>
+            <input id="r-name" name="name" required placeholder="e.g. Priya &amp; family">
+          </div>
+          <div class="field">
+            <span class="lbl">Will you attend?</span>
+            <div class="choices">
+              <label><input type="radio" name="attend" value="Yes, joyfully attending" checked><span>Yes, joyfully 🎉</span></label>
+              <label><input type="radio" name="attend" value="Sorry, can't make it"><span>Sorry, can't make it</span></label>
+            </div>
+          </div>
+          <div class="field" id="guest-field">
+            <span class="lbl">How many guests are coming?</span>
+            <div class="stepper"><button type="button" id="g-minus" aria-label="Fewer guests">−</button><output id="g-count">2</output><button type="button" id="g-plus" aria-label="More guests">+</button></div>
+          </div>
+          <div class="field">
+            <span class="lbl">Which events?</span>
+            <div class="choices">
+              <label><input type="radio" name="event" value="Muhurtham & Reception" checked><span>Both</span></label>
+              <label><input type="radio" name="event" value="Muhurtham only"><span>Muhurtham</span></label>
+              <label><input type="radio" name="event" value="Reception & Dinner only"><span>Reception</span></label>
+            </div>
+          </div>
+          <div class="field">
+            <label for="r-msg">Your wishes for the couple (optional)</label>
+            <textarea id="r-msg" name="msg" rows="3" placeholder="Write a blessing or message…"></textarea>
+          </div>
+          <button class="btn btn-send" type="submit"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.2-1.6-1.2-3s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Send RSVP on WhatsApp</button>
+        </form>
+        <div class="thanks" id="thanks">
+          <h3>Thank you!</h3>
+          <p>Your RSVP is ready to send on WhatsApp. We can't wait to celebrate with you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="names">Arjun &amp; Meera</p>
+    <p class="wel">Welcome all · அனைவரையும் அன்புடன் வரவேற்கிறோம்</p>
+    <p>With love from the Raghavan &amp; Suresh families</p>
+    <div class="credit">
+      Made with ♥ by <a href="https://raymelz.com/digital-invitations/" target="_blank" rel="noopener">Raymelz</a> · Want a wedding invitation website like this? From ₹299.
+      <p class="demo">This is a sample invitation. Names, venues and photos are for demonstration only.</p>
+    </div>
+  </footer>
+
+  <button class="music" id="music" aria-label="Play or pause music"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 18V6l11-2v12" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></svg></button>
+  <audio id="song" src="song.mp3" loop preload="none"></audio>
+
+  <script>
+    (function () {
+      var song = document.getElementById("song"), musicBtn = document.getElementById("music");
+      var play = function () { song.volume = 0.5; song.play().then(function () { musicBtn.classList.add("playing"); }).catch(function () {}); };
+      musicBtn.addEventListener("click", function () {
+        if (song.paused) play(); else { song.pause(); musicBtn.classList.remove("playing"); }
+      });
+
+      // Envelope intro
+      var intro = document.getElementById("intro"), env = document.getElementById("env");
+      var openEnv = function () {
+        if (env.classList.contains("open")) return;
+        env.classList.add("open"); play();
+        setTimeout(function () { intro.classList.add("gone"); document.body.classList.remove("locked"); }, 1500);
+      };
+      env.addEventListener("click", openEnv);
+      env.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openEnv(); } });
+
+      // Petals
+      var petals = document.getElementById("petals"), colors = ["#f7a1b5", "#fbd38d", "#fff1d6", "#f48aa5"];
+      for (var i = 0; i < 16; i++) {
+        var p = document.createElement("i"); p.className = "petal";
+        p.style.left = Math.random() * 100 + "%";
+        p.style.background = colors[i % colors.length];
+        p.style.animationDuration = 7 + Math.random() * 7 + "s";
+        p.style.animationDelay = -Math.random() * 12 + "s";
+        petals.appendChild(p);
+      }
+
+      // Countdown to the muhurtham (9:00 AM IST)
+      var target = new Date("2026-12-13T09:00:00+05:30").getTime();
+      var pad = function (n) { return String(n).padStart(2, "0"); };
+      var tick = function () {
+        var d = Math.max(0, target - Date.now());
+        document.getElementById("cd-d").textContent = pad(Math.floor(d / 864e5));
+        document.getElementById("cd-h").textContent = pad(Math.floor(d / 36e5) % 24);
+        document.getElementById("cd-m").textContent = pad(Math.floor(d / 6e4) % 60);
+        document.getElementById("cd-s").textContent = pad(Math.floor(d / 1e3) % 60);
+      };
+      tick(); setInterval(tick, 1000);
+
+      // Reveal on scroll
+      var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, { threshold: 0.15 });
+      document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
+
+      // Gallery lightbox
+      var lb = document.getElementById("lb"), lbImg = lb.querySelector("img");
+      document.querySelectorAll(".grid-g figure img").forEach(function (img) {
+        img.addEventListener("click", function () { lbImg.src = img.src; lbImg.alt = img.alt; lb.classList.add("on"); });
+      });
+      lb.addEventListener("click", function () { lb.classList.remove("on"); });
+
+      // RSVP: guest count + WhatsApp message
+      var count = 2, out = document.getElementById("g-count"), guestField = document.getElementById("guest-field");
+      document.getElementById("g-minus").addEventListener("click", function () { count = Math.max(1, count - 1); out.textContent = count; });
+      document.getElementById("g-plus").addEventListener("click", function () { count = Math.min(20, count + 1); out.textContent = count; });
+      document.querySelectorAll('input[name="attend"]').forEach(function (r) {
+        r.addEventListener("change", function () { guestField.style.display = r.value.indexOf("Yes") === 0 && r.checked ? "" : "none"; });
+      });
+      document.getElementById("rsvp-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        var f = e.target, attend = f.attend.value, yes = attend.indexOf("Yes") === 0;
+        var text = "Wedding RSVP: Arjun & Meera (13 Dec 2026)\n" +
+          "Name: " + f.name.value.trim() + "\n" +
+          "Attending: " + attend + "\n" +
+          (yes ? "Guests: " + count + "\nEvents: " + f.event.value + "\n" : "") +
+          (f.msg.value.trim() ? "Wishes: " + f.msg.value.trim() : "");
+        window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
+        f.style.display = "none"; document.getElementById("thanks").classList.add("on");
+      });
+    })();
+  </script>
+</body>
+</html>
