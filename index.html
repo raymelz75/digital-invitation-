@@ -14,7 +14,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&family=Noto+Sans+Tamil:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&family=Noto+Sans+Tamil:wght@400;600&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="images/hero.jpg">
   <style>
     :root {
@@ -36,7 +36,7 @@
     body.locked { overflow: hidden; }
     img { display: block; max-width: 100%; }
     a { color: inherit; }
-    .script { font-family: "Great Vibes", cursive; font-weight: 400; }
+    .script { font-family: "Playfair Display", serif; font-weight: 700; }
     .serif { font-family: "Cormorant Garamond", serif; }
     .ta { font-family: "Noto Sans Tamil", sans-serif; }
     .wrap { width: min(1100px, 100% - 40px); margin: 0 auto; }
@@ -46,18 +46,19 @@
     .intro { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; text-align: center; padding: 24px;
       background: radial-gradient(circle at 50% 35%, var(--maroon-2), var(--wine) 75%); color: var(--gold-2); transition: opacity .9s ease, visibility .9s; }
     .intro.gone { opacity: 0; visibility: hidden; }
-    .intro .pre { letter-spacing: .32em; text-transform: uppercase; font-size: .78rem; color: #f0d9a8; opacity: .85; }
-    .intro h1 { font-size: clamp(3rem, 12vw, 5.2rem); line-height: 1.1; margin: 10px 0 26px; }
+    .intro .pre { letter-spacing: .32em; text-transform: uppercase; font-size: .85rem; color: #fff; opacity: .9; }
+    .intro h1 { font-size: clamp(2.4rem, 10vw, 4rem); line-height: 1.15; margin: 12px 0 30px; color: #ffe6a6; letter-spacing: .01em; text-shadow: 0 2px 18px rgba(0,0,0,.35); }
+    .intro h1 .amp { color: #fff; font-style: italic; font-weight: 600; }
     .env { position: relative; width: 270px; height: 180px; margin: 0 auto; cursor: pointer; perspective: 900px; }
     .env .back { position: absolute; inset: 0; background: #f5e3c3; border-radius: 10px; box-shadow: 0 30px 60px rgba(0,0,0,.45); }
     .env .card { position: absolute; left: 14px; right: 14px; top: 14px; height: 150px; background: var(--ivory); border-radius: 6px; display: grid; place-items: center; color: var(--maroon); transition: transform 1s .5s cubic-bezier(.2,.8,.2,1); }
-    .env .card span { font-family: "Great Vibes", cursive; font-size: 2.2rem; }
+    .env .card span { font-family: "Playfair Display", serif; font-style: italic; font-weight: 600; font-size: 1.5rem; }
     .env .front { position: absolute; inset: 0; border-radius: 10px; background: linear-gradient(160deg, #f0dab2, #e3c38c); clip-path: polygon(0 0, 50% 58%, 100% 0, 100% 100%, 0 100%); }
     .env .flap { position: absolute; left: 0; right: 0; top: 0; height: 110px; transform-origin: top; transition: transform .8s ease; z-index: 3;
       background: linear-gradient(to bottom, #e6c995, #dcb978); clip-path: polygon(0 0, 100% 0, 50% 100%); }
     .env .seal { position: absolute; left: 50%; top: 82px; width: 58px; height: 58px; margin-left: -29px; border-radius: 50%; z-index: 4;
       background: radial-gradient(circle at 35% 35%, #b02a46, #6d0f26); color: var(--gold-2); display: grid; place-items: center;
-      font-family: "Great Vibes", cursive; font-size: 1.15rem; box-shadow: 0 6px 14px rgba(0,0,0,.4); transition: opacity .4s; }
+      font-family: "Playfair Display", serif; font-weight: 700; font-size: .95rem; box-shadow: 0 6px 14px rgba(0,0,0,.4); transition: opacity .4s; }
     .env.open .flap { transform: rotateX(180deg); z-index: 0; }
     .env.open .seal { opacity: 0; }
     .env.open .card { transform: translateY(-90px); }
@@ -66,14 +67,14 @@
 
     /* ---------- Hero ---------- */
     .hero { position: relative; min-height: 100svh; display: grid; align-items: end; color: #fff; overflow: hidden; }
-    .hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 41% 30%; transform: scale(1.08); animation: zoom 14s ease-out forwards; }
+    .hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; transform: scale(1.08); animation: zoom 14s ease-out forwards; }
     @keyframes zoom { to { transform: scale(1); } }
-    .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(58,7,22,.15) 0%, rgba(58,7,22,.25) 40%, rgba(58,7,22,.92) 85%); }
+    .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(58,7,22,0) 0%, rgba(58,7,22,.1) 38%, rgba(58,7,22,.75) 62%, rgba(58,7,22,.96) 85%); }
     .hero-in { position: relative; z-index: 2; text-align: center; padding: 0 20px 70px; }
     .welcome { display: inline-block; border: 1px solid rgba(243,213,138,.7); border-radius: 999px; padding: 6px 18px; font-size: .78rem; letter-spacing: .26em; text-transform: uppercase; color: var(--gold-2); background: rgba(58,7,22,.35); backdrop-filter: blur(4px); }
     .hero .ta-line { margin-top: 12px; font-size: 1rem; color: #ffe9bf; }
-    .hero h1 { font-size: clamp(3.6rem, 14vw, 7rem); line-height: 1.05; margin: 10px 0 4px; text-shadow: 0 6px 30px rgba(0,0,0,.4); }
-    .hero h1 .amp { font-size: .6em; color: var(--gold-2); vertical-align: middle; }
+    .hero h1 { font-size: clamp(2.7rem, 11vw, 5rem); line-height: 1.1; color: #fff; margin: 10px 0 4px; text-shadow: 0 6px 30px rgba(0,0,0,.4); }
+    .hero h1 .amp { font-size: .8em; color: var(--gold-2); font-style: italic; font-weight: 600; }
     .hero .getting { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 1.35rem; color: #fde9c4; }
     .date-chip { display: inline-flex; gap: 14px; align-items: center; margin-top: 18px; font-family: "Cormorant Garamond", serif; font-size: 1.3rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-2); }
     .date-chip i { width: 40px; height: 1px; background: var(--gold-2); opacity: .7; }
@@ -90,7 +91,7 @@
     section { padding: 90px 0; }
     .head { text-align: center; margin-bottom: 44px; }
     .head .eyebrow { font-size: .75rem; letter-spacing: .3em; text-transform: uppercase; color: var(--maroon-2); font-weight: 600; }
-    .head h2 { font-family: "Great Vibes", cursive; font-weight: 400; font-size: clamp(2.6rem, 8vw, 3.6rem); color: var(--maroon); line-height: 1.15; margin-top: 6px; }
+    .head h2 { font-family: "Playfair Display", serif; font-weight: 700; font-size: clamp(2rem, 6vw, 2.8rem); color: var(--maroon); line-height: 1.15; margin-top: 6px; }
     .orn { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 12px auto 0; color: var(--gold); }
     .orn i { width: 60px; height: 1px; background: currentColor; }
     .orn svg { width: 22px; height: 22px; }
@@ -104,7 +105,7 @@
     .note .ganesha { font-size: .82rem; letter-spacing: .2em; color: var(--maroon-2); text-transform: uppercase; }
     .note p.lead { font-family: "Cormorant Garamond", serif; font-size: 1.45rem; line-height: 1.5; margin: 18px 0; color: var(--ink); }
     .families { display: grid; grid-template-columns: 1fr auto 1fr; gap: 18px; align-items: center; margin: 30px 0 10px; }
-    .families h3 { font-family: "Great Vibes", cursive; font-weight: 400; font-size: 2.6rem; color: var(--maroon); line-height: 1; }
+    .families h3 { font-family: "Playfair Display", serif; font-weight: 700; font-size: 2.1rem; color: var(--maroon); line-height: 1; }
     .families p { font-size: .88rem; color: var(--muted); margin-top: 8px; }
     .families .heart { color: var(--gold); font-size: 1.6rem; }
     .love-line { margin-top: 22px; font-style: italic; font-family: "Cormorant Garamond", serif; font-size: 1.25rem; color: var(--maroon-2); }
@@ -132,7 +133,7 @@
     .ev .pic { height: 210px; position: relative; }
     .ev .pic img { width: 100%; height: 100%; object-fit: cover; }
     .ev .pic::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 40%, rgba(58,7,22,.85)); }
-    .ev .pic span { position: absolute; left: 22px; bottom: 16px; z-index: 2; font-family: "Great Vibes", cursive; font-size: 2.4rem; color: var(--gold-2); line-height: 1; }
+    .ev .pic span { position: absolute; left: 22px; bottom: 16px; z-index: 2; font-family: "Playfair Display", serif; font-weight: 700; font-size: 1.8rem; color: var(--gold-2); line-height: 1; }
     .ev .body { padding: 22px 24px 26px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
     .row { display: flex; gap: 14px; align-items: flex-start; }
     .row .ic { flex: none; width: 42px; height: 42px; border-radius: 12px; background: rgba(243,213,138,.14); color: var(--gold-2); display: grid; place-items: center; }
@@ -177,12 +178,12 @@
     .stepper output { min-width: 48px; text-align: center; font-weight: 600; font-size: 1.1rem; }
     .rsvp-card .btn-send { width: 100%; justify-content: center; background: var(--green); color: #fff; padding: 15px; font-size: 1rem; box-shadow: 0 12px 26px rgba(31,157,85,.3); }
     .thanks { display: none; text-align: center; padding: 20px 0; }
-    .thanks h3 { font-family: "Great Vibes", cursive; font-weight: 400; font-size: 3rem; color: var(--maroon); }
+    .thanks h3 { font-family: "Playfair Display", serif; font-weight: 700; font-size: 2.2rem; color: var(--maroon); }
     .thanks.on { display: block; }
 
     /* Footer */
     footer { background: var(--wine); color: #f0dcc0; text-align: center; padding: 70px 20px 40px; }
-    footer .names { font-family: "Great Vibes", cursive; font-size: 3.4rem; color: var(--gold-2); line-height: 1.1; }
+    footer .names { font-family: "Playfair Display", serif; font-weight: 700; font-size: 2.6rem; color: var(--gold-2); line-height: 1.1; }
     footer .wel { margin: 14px 0 4px; font-family: "Cormorant Garamond", serif; font-size: 1.35rem; }
     footer .credit { margin-top: 40px; padding-top: 22px; border-top: 1px solid rgba(243,213,138,.2); font-size: .85rem; color: #d8bfa0; }
     footer .credit a { color: var(--gold-2); font-weight: 600; }
@@ -196,9 +197,10 @@
 
     @media (min-width: 821px) {
       .hero { align-items: center; }
-      .hero::after { background: linear-gradient(90deg, rgba(58,7,22,.05) 25%, rgba(58,7,22,.55) 55%, rgba(58,7,22,.9) 85%); }
-      .hero-in { justify-self: end; width: 50%; padding: 0 5% 0 0; }
-      .hero > img { object-position: 30% 30%; }
+      .hero { background: radial-gradient(circle at 75% 45%, var(--maroon-2), var(--wine) 70%); }
+      .hero::after { background: linear-gradient(90deg, rgba(58,7,22,0) 30%, rgba(58,7,22,.85) 48%, rgba(58,7,22,0) 49%); }
+      .hero > img { width: 48%; object-position: 50% 15%; }
+      .hero-in { justify-self: end; width: 52%; padding: 0 4% 0 2%; }
     }
     @media (max-width: 820px) {
       .date-chip { font-size: 1.05rem; letter-spacing: .08em; }
@@ -227,7 +229,7 @@
   <div class="intro" id="intro">
     <div>
       <p class="pre">You're invited</p>
-      <h1 class="script foil-text">Arjun &amp; Meera</h1>
+      <h1 class="script">Arjun <span class="amp">&amp;</span> Meera</h1>
       <div class="env" id="env" role="button" tabindex="0" aria-label="Open the invitation">
         <div class="back"></div>
         <div class="card"><span>Save the date</span></div>
@@ -241,7 +243,7 @@
 
   <!-- Hero -->
   <header class="hero" id="top">
-    <img src="images/hero.jpg" alt="Arjun and Meera, the bride and groom, smiling together in a garden">
+    <img src="images/hero.jpg" alt="Arjun and Meera, the bride and groom, in traditional wedding attire">
     <div id="petals" aria-hidden="true"></div>
     <div class="hero-in">
       <span class="welcome">Welcome all</span>
@@ -357,7 +359,8 @@
       </div>
       <div class="grid-g reveal">
         <figure class="tall"><img src="images/couple-stage.jpg" alt="Bride and groom with garlands on the wedding stage" loading="lazy"></figure>
-        <figure class="wide"><img src="images/hero.jpg" alt="Couple smiling together in a garden" loading="lazy"></figure>
+        <figure class="wide"><img src="images/garden.jpg" alt="Couple smiling together in a garden" loading="lazy"></figure>
+        <figure class="tall"><img src="images/golden.jpg" alt="Bride and groom in traditional attire at golden hour" loading="lazy"></figure>
         <figure class="tall"><img src="images/bride.jpg" alt="Bride in a red bridal saree and jewellery" loading="lazy"></figure>
         <figure><img src="images/story-3.jpg" alt="Couple holding engagement rings" loading="lazy"></figure>
         <figure><img src="images/story-2.jpg" alt="Couple laughing under the trees" loading="lazy"></figure>
